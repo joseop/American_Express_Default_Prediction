@@ -3,7 +3,9 @@
 
 ## Como usar
 -------------
+Ejecutar Notebook **hola**
 
+-------------
 ### Miembros del equipo
 
 - Andres Felipe Graciano Monsalve CC71375739 Ingeniería de Sistemas
