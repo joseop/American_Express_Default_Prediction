@@ -2,7 +2,6 @@
 -----------------------------
 
 ## Como usar
--------------
 Ejecute el cuaderno `01 - Analisis de datos, modelos e interacciones` para generar los datos de prueba,tratarlos y realiizar el modelado predictivo
 
 -------------
