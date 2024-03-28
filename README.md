@@ -3,7 +3,7 @@
 
 ## Como usar
 -------------
-Ejecutar Notebook ~~hola~~
+Ejecutar Notebook 01 - `hhhhh`
 
 -------------
 ### Miembros del equipo
@@ -13,8 +13,3 @@ Ejecutar Notebook ~~hola~~
 - Jose Carlos Ortiz Padilla CC 1003059949 Ingeniería de sistemas
 
 - Sulay Gisela Martínez Barreto CC 1038137981 Ingeniería de sistemas
-
-
-<div style="background-color: RED ; padding: 10px;">
-Este es un texto con fondo. Puedes modificar el color de fondo ajustando el valor de `background-color`.
-</div>
