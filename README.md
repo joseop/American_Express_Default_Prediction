@@ -2,7 +2,7 @@
 -----------------------------
 
 ## Como usar
-Ejecute el cuaderno `01 - Analisis de datos, modelos e interacciones` para extraer los datos de prueba, tratarlos y realizar el modelado predictivo
+Ejecute el cuaderno `01 - Analisis de datos, modelos e interacciones` para extraer los datos de prueba, tratarlos y mostrar los resultados del modelado predictivo
 
 -------------
 ### Miembros del equipo
