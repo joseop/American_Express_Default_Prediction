@@ -4,7 +4,7 @@
 ## Como usar
 -------------
 
-###Miembros del equipo
+### Miembros del equipo
 
 Andres Felipe Graciano Monsalve CC71375739 Ingeniería de Sistemas
 
