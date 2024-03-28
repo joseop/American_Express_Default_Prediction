@@ -3,7 +3,7 @@
 
 ## Como usar
 -------------
-Ejecutar Notebook **hola**
+Ejecutar Notebook *hola*
 
 -------------
 ### Miembros del equipo
