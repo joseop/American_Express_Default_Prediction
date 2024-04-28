@@ -4,21 +4,38 @@ from loguru import logger
 import argparse
 import os
 from sklearn.model_selection import train_test_split
-from sklearn.model_selection import train_test_split
 from sklearn.linear_model import LogisticRegression
 from sklearn.preprocessing import LabelEncoder
 from sklearn.model_selection import GridSearchCV
+from sklearn.metrics import confusion_matrix
 
+parser = argparse.ArgumentParser()
+parser.add_argument('--data_file', required=True, type=str, help='a csv file with train data')
+parser.add_argument('--model_file', required=True, type=str, help='where the trained model will be stored')
+parser.add_argument('--overwrite_model', default=False, action='store_true', help='if sets overwrites the model file if it exists')
+
+args = parser.parse_args()
+
+model_file = args.model_file
+data_file  = args.data_file
+overwrite = args.overwrite_model
+
+if os.path.isfile(model_file):
+    if overwrite:
+        logger.info(f"overwriting existing model file {model_file}")
+    else:
+        logger.info(f"model file {model_file} exists. exitting. use --overwrite_model option")
+        exit(-1)
+
+logger.info("loading train data")
 
 #llamo el archivo del dataframe
 
 #asignando las columnas del datafull.txt al df convirtiendolo al csv
-df = pd.read_csv('data_full.csv')
-df.head()
+df = pd.read_csv(data_file, sep='\t')
+#df.head()
 
-df.info()
-
-print("Hola")
+#df.info()
 
 #llenando las columnas faltantes
 column =  df.select_dtypes(include=['object']).columns.to_list()
@@ -78,14 +95,6 @@ sub_df.isna().sum()
 completar_na(sub_df)
 
 ####Modelos
-
-# Separar las características (X) y la variable objetivo (y)
-X = df.drop('target', axis=1)  # Quitamos la columna 'target' del DataFrame para obtener las características
-y = df['target']  # Columna 'target' como variable objetivo
-
-# Dividir el conjunto de datos en entrenamiento y prueba (por ejemplo, 70-30)
-X_train, X_test, y_train, y_test = train_test_split(X, y, test_size=0.3, random_state=42)
-
 # 'customer_ID' es una variable categórica y 'S_2' es una variable de tipo fecha
 
 # Codificar 'customer_ID' usando Label Encoding
@@ -105,8 +114,8 @@ df.drop(['customer_ID', 'S_2'], axis=1, inplace=True)
 X = df.drop('target', axis=1)  # Quitamos la columna 'target' del DataFrame para obtener las características
 y = df['target']  # Columna 'target' como variable objetivo
 #train y.fit con x y
-# Dividir el conjunto de datos en entrenamiento y prueba (por ejemplo, 70-30)
-X_train, X_test, y_train, y_test = train_test_split(X, y, test_size=0.3, random_state=42)
+# Dividir el conjunto de datos en entrenamiento y prueba (por ejemplo, 80-20)
+X_train, X_test, y_train, y_test = train_test_split(X, y, test_size=0.2, random_state=42)
 
 # Inicializar los modelos
 logistic_regression = LogisticRegression()
@@ -149,6 +158,5 @@ y_pred_proba = best_logistic_regression.predict_proba(X_test)[:, 1]
 conf_matrix = confusion_matrix(y_test, y_pred)
 
 m=best_logistic_regression
-with open("model.pkl", "wb") as f:
+with open(model_file, "wb") as f:
     pickle.dump(m, f)
-    
