@@ -13,7 +13,7 @@ Clonar el repositorio y abrir la terminal en esta carpeta, ejecutar los siguient
 
 2. docker run -p 3000:3000 -it --name american american --> hacer un docker con la iamgen creada y ver el cmd del docker en tiempo real
 
-3. docker exec -it 489ec5ab41c /bin/bash --> entrar a los archivos del docker
+3. docker exec -it {id del contenedor} /bin/bash --> entrar a los archivos del docker
 
 4. docker ps ---> ver docker creados
 
