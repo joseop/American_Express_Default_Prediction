@@ -14,13 +14,10 @@ WORKDIR /app
 RUN pip install --no-cache-dir -r biblioteca.txt
 
 # Copia el script "train.py" al directorio "/app" en el contenedor
-COPY train.py /app/
+COPY ./scripts/train.py /app/
 
 # Copia el script "predict.py" al directorio "/app" en el contenedor
-COPY predict.py /app/
-
-# Copia el script "predict.py" al directorio "/app" en el contenedor
-COPY apirest.py /app/
+COPY ./scripts/predict.py /app/
 
 # Expone el puerto 3000
 EXPOSE 3000
