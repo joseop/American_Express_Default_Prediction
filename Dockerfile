@@ -23,5 +23,5 @@ COPY ./scripts/predict.py /app/
 EXPOSE 3000
 
 # Comando por defecto al ejecutar el contenedor
-CMD ["sh", "-c", "python train.py --data_file=data/train_data.csv --model_file=modelo_final.pkl && python predict.py --input_file=data/test_data.csv --predictions_file=data/prediction_file.csv --model_file=modelo_final.pkl && python apirest.py"]
+CMD ["sh", "-c", "python train.py --data_file=data/train_data.csv --model_file=modelo_final.pkl && python predict.py --input_file=data/test_data.csv --predictions_file=data/prediction_file.csv --model_file=modelo_final.pkl"]
 
