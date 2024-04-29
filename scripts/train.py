@@ -25,7 +25,7 @@ if os.path.isfile(model_file):
         logger.info(f"overwriting existing model file {model_file}")
     else:
         logger.info(f"model file {model_file} exists. exitting. use --overwrite_model option")
-        exit(-1)
+        #exit(-1)
 
 logger.info("loading train data")
 

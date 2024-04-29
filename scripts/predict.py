@@ -119,3 +119,5 @@ preds = m.predict(X)
 logger.info(f"saving predictions to {predictions_file}")
 # Guardar las predicciones en un archivo CSV
 pd.DataFrame(preds.reshape(-1,1), columns=['preds']).to_csv(predictions_file, index=False)
+
+print(f"Prediction file has been created {predictions_file}")
