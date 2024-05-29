@@ -7,7 +7,7 @@ Ejecute el cuaderno `01 - Analisis de datos, modelos e interacciones` para extra
 -------------
 # Fase 2
 ## Instrucciones Docker
-Clonar el repositorio y abrir la terminal en esta carpeta, ejecutar los siguientes comandos para la creacion y ejecucion del contenedor
+Clonar el repositorio y abrir la terminal en esta carpeta fase 2, ejecutar los siguientes comandos para la creacion y ejecucion del contenedor
 
 1. docker build -t american . --> crear la imagen
 
@@ -25,7 +25,13 @@ Clonar el repositorio y abrir la terminal en esta carpeta, ejecutar los siguient
 
 -------------
 # Fase 3
-## Instrucciones Api Rest  
+## Instrucciones Api Rest con Docker
+Clonar el repositorio y abrir la terminar el la raiz de la carpeta fase 3, a continuacion ejecutar los siguientes comandos
+```bash
+1. docker build -t api .  --> Construir el contenedor
+2. docker run -it -p 5000:5000 api  --> Ejecutar el contenedor
+3. python client3.py  --> Ejecutar el cliente
+
 
 
 -------------
