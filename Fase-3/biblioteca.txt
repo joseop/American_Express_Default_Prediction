@@ -1,0 +1,4 @@
+pandas==2.0.3
+sklearn-pandas==2.2.0
+loguru==0.7.2
+Flask==3.0.3
