@@ -31,7 +31,8 @@ Clonar el repositorio y abrir la terminar el la raiz de la carpeta fase 3, a con
 1. Construir el contenedor
 
    
- ```bash docker build -t api . ```
+ ```console docker build -t api .
+```
 
 4. docker run -it -p 5000:5000 api  --> Ejecutar el contenedor
 5. python client3.py  --> Ejecutar el cliente
