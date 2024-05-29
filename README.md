@@ -31,7 +31,7 @@ Clonar el repositorio y abrir la terminar el la raiz de la carpeta fase 3, a con
 1. Construir el contenedor
 
    
- ```console docker build -t api .
+ ```bash docker build -t api .
 ```
 
 4. docker run -it -p 5000:5000 api  --> Ejecutar el contenedor
