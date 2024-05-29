@@ -1,11 +1,11 @@
 # American Express - Default Prediction
 -----------------------------
-
+# Fase 1
 ## Como usar
 Ejecute el cuaderno `01 - Analisis de datos, modelos e interacciones` para extraer los datos de prueba, tratarlos y mostrar los resultados del modelado predictivo
 
 -------------
-
+#Fase 2
 ## Instrucciones Docker
 Clonar el repositorio y abrir la terminal en esta carpeta, ejecutar los siguientes comandos para la creacion y ejecucion del contenedor
 
@@ -23,7 +23,11 @@ Clonar el repositorio y abrir la terminal en esta carpeta, ejecutar los siguient
 
 7. explorar archivos y las predicciones resultantes
 
-   
+-------------
+#Fase 3
+## Instrucciones Api Rest  
+
+
 -------------
 ### Miembros del equipo
 
