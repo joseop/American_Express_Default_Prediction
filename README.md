@@ -28,7 +28,7 @@ Clonar el repositorio y abrir la terminal en esta carpeta fase 2, ejecutar los s
 ## Instrucciones Api Rest con Docker
 Clonar el repositorio y abrir la terminar el la raiz de la carpeta fase 3, a continuacion ejecutar los siguientes comandos
 
-1. ```console docker build -t api . ``` --> Construir el contenedor
+1. ```bash docker build -t api . ``` --> Construir el contenedor
 2. docker run -it -p 5000:5000 api  --> Ejecutar el contenedor
 3. python client3.py  --> Ejecutar el cliente
 
