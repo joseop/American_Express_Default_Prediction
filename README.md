@@ -9,19 +9,25 @@ Ejecute el cuaderno `01 - Analisis de datos, modelos e interacciones` para extra
 ## Instrucciones Docker
 Clonar el repositorio y abrir la terminal en esta carpeta fase 2, ejecutar los siguientes comandos para la creacion y ejecucion del contenedor
 
-1. docker build -t american . --> crear la imagen
+1. Crear la imagen
+```console
+ docker build -t american .
+```
 
-2. docker run -p 3000:3000 -it --name american american --> hacer un docker con la iamgen creada y ver el cmd del docker en tiempo real
+2. Hacer un docker con la iamgen creada y ver el cmd del docker en tiempo real
+```console
+ docker run -p 3000:3000 -it --name american american
+```
+3. Inicializa el contenedor 
+```console
+docker start {id del contenedor}
+```
+4. Entrar a los archivos del docker
+```console
+docker exec -it {id del contenedor} /bin/bash
+```
 
-3.docker start {id del contenedor} --> inicializa el contenedor 
-
-4. docker exec -it {id del contenedor} /bin/bash --> entrar a los archivos del docker
-
-5. docker ps ---> ver docker creados
-
-6. docker images --> ver imagenes creadas
-
-7. explorar archivos y las predicciones resultantes
+Eexplorar archivos y las predicciones resultantes
 
 -------------
 # Fase 3
@@ -29,16 +35,17 @@ Clonar el repositorio y abrir la terminal en esta carpeta fase 2, ejecutar los s
 Clonar el repositorio y abrir la terminar el la raiz de la carpeta fase 3, a continuacion ejecutar los siguientes comandos
 
 1. Construir el contenedor
-
-   
 ```console
  docker build -t api .
 ```
-
-4. docker run -it -p 5000:5000 api  --> Ejecutar el contenedor
-5. python client3.py  --> Ejecutar el cliente
-
-
+2. Ejecutar el contendor
+```console
+ docker run -it -p 5000:5000 api
+```
+3. Ejecutar el cliente
+```console
+ python client3.py
+```
 
 -------------
 ### Miembros del equipo
