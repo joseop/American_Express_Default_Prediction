@@ -62,7 +62,7 @@ Clonar el repositorio y abrir la terminar el la raiz de la carpeta fase 3, a con
 ```
 2. Ejecutar el contendor
 ```console
- docker run -it -p 5000:5000 api
+docker run -it -p 3000:3000 api
 ```
 3. Ejecutar el cliente
 ```console
