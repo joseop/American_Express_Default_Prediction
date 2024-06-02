@@ -1,4 +1,5 @@
 
+<<<<<<< HEAD
 # API REST con Flask
 
 Esta aplicación expone dos endpoints para el entrenamiento y predicción de un modelo de regresión logística.
@@ -24,6 +25,50 @@ docker exec -it [container_id] /bin/bash
 ```
 
 ### Ver contenedores creados
+=======
+-------------
+# Fase 2
+## Instrucciones Docker
+Clonar el repositorio y abrir la terminal en esta carpeta fase 2, ejecutar los siguientes comandos para la creacion y ejecucion del contenedor
+
+1. Crear la imagen
+```console
+ docker build -t american .
+```
+
+2. Hacer un docker con la iamgen creada y ver el cmd del docker en tiempo real
+```console
+ docker run -p 3000:3000 -it --name american american
+```
+3. Inicializa el contenedor 
+```console
+docker start {id del contenedor}
+```
+4. Entrar a los archivos del docker
+```console
+docker exec -it {id del contenedor} /bin/bash
+```
+
+Eexplorar archivos y las predicciones resultantes
+
+-------------
+# Fase 3
+## Instrucciones Api Rest con Docker
+Clonar el repositorio y abrir la terminar el la raiz de la carpeta fase 3, a continuacion ejecutar los siguientes comandos
+
+1. Construir el contenedor
+```console
+ docker build -t api .
+```
+2. Ejecutar el contendor
+```console
+ docker run -it -p 5000:5000 api
+```
+3. Ejecutar el cliente
+```console
+ python client3.py
+```
+>>>>>>> origin/main
 
 ```sh
 docker ps
