@@ -1,5 +1,4 @@
-Flask==3.0.3
-loguru==0.7.2
-numpy==1.22.0
 pandas==2.0.3
-scikit-learn==1.0.2
+sklearn-pandas==2.2.0
+loguru==0.7.2
+Flask==3.0.3

@@ -1,38 +1,84 @@
-# American Express - Default Prediction
------------------------------
-# Fase 1
-## Como usar
-Ejecute el cuaderno `01 - Analisis de datos, modelos e interacciones` para extraer los datos de prueba, tratarlos y mostrar los resultados del modelado predictivo
 
--------------
-# Fase 2
-## Instrucciones Docker
-Clonar el repositorio y abrir la terminal en esta carpeta, ejecutar los siguientes comandos para la creacion y ejecucion del contenedor
+# API REST con Flask
 
-1. docker build -t american . --> crear la imagen
+Esta aplicación expone dos endpoints para el entrenamiento y predicción de un modelo de regresión logística.
 
-2. docker run -p 3000:3000 -it --name american american --> hacer un docker con la iamgen creada y ver el cmd del docker en tiempo real
+## Instrucciones para Docker
 
-3.docker start {id del contenedor} --> inicializa el contenedor 
+### Crear la imagen
 
-4. docker exec -it {id del contenedor} /bin/bash --> entrar a los archivos del docker
+```sh
+docker build -t american .
+```
 
-5. docker ps ---> ver docker creados
+### Ejecutar un contenedor con la imagen creada
 
-6. docker images --> ver imagenes creadas
+```sh
+docker run -p 3000:3000 -it --name american american
+```
 
-7. explorar archivos y las predicciones resultantes
+### Entrar al contenedor
 
--------------
-# Fase 3
-## Instrucciones Api Rest  
+```sh
+docker exec -it [container_id] /bin/bash
+```
 
+### Ver contenedores creados
 
--------------
-### Miembros del equipo
+```sh
+docker ps
+```
 
-- Andres Felipe Graciano Monsalve CC71375739 Ingeniería de Sistemas
+### Ver imágenes creadas
 
-- Jose Carlos Ortiz Padilla CC 1003059949 Ingeniería de sistemas
+```sh
+docker images
+```
 
-- Sulay Gisela Martínez Barreto CC 1038137981 Ingeniería de sistemas
+## Enviar una solicitud de entrenamiento
+
+### Para enviar una solicitud al endpoint `/train`, sigue estos pasos:
+
+1. **Crear una nueva solicitud**:
+    - Haz clic en el botón "New" y selecciona "Request".
+
+2. **Configurar la solicitud**:
+    - Asigna un nombre a la solicitud, por ejemplo, "Train Model".
+    - Selecciona una colección o crea una nueva para guardar la solicitud.
+    - Haz clic en "Save to [Collection Name]".
+
+3. **Configurar los detalles de la solicitud**:
+    - Método: Selecciona `POST`.
+    - URL: Introduce la URL del endpoint `/train`. Si estás ejecutando Flask localmente en el puerto 3000, la URL será `http://127.0.0.1:3000/train`.
+
+4. **Enviar la solicitud**:
+    - Haz clic en "Send".
+
+## Para enviar un archivo a la API REST que acabamos de crear utilizando Postman, sigue estos pasos:
+
+### Enviar un archivo para predecir
+
+1. **Abrir Postman**:
+    - Inicia Postman en tu máquina.
+
+2. **Crear una nueva solicitud**:
+    - Haz clic en el botón "New" y selecciona "Request".
+
+3. **Configurar la solicitud**:
+    - Asigna un nombre a la solicitud, por ejemplo, "Predict File".
+    - Selecciona una colección o crea una nueva para guardar la solicitud.
+    - Haz clic en "Save to [Collection Name]".
+
+4. **Configurar los detalles de la solicitud**:
+    - Método: Selecciona `POST`.
+    - URL: Introduce la URL del endpoint `/predict`. Si estás ejecutando Flask localmente en el puerto 3000, la URL será `http://127.0.0.1:3000/predict`.
+
+5. **Añadir el archivo**:
+    - Ve a la pestaña "Body".
+    - Selecciona "form-data".
+    - En la clave, escribe `file`.
+    - En el valor, selecciona el tipo "File" desde el menú desplegable.
+    - Haz clic en "Choose Files" y selecciona el archivo que deseas enviar.
+
+6. **Enviar la solicitud**:
+    - Haz clic en "Send".
